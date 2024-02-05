@@ -1,7 +1,7 @@
 import 'package:calculator/domain/expression.dart';
 
-class Multiply implements Expression {
-  const Multiply({
+class Subtraction implements Expression {
+  const Subtraction({
     required Expression left,
     required Expression right,
   })  : _left = left,
@@ -12,6 +12,6 @@ class Multiply implements Expression {
 
   @override
   num calculate() {
-    return _left.calculate() * _right.calculate();
+    return _left.calculate() - _right.calculate();
   }
 }

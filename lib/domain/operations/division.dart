@@ -1,8 +1,8 @@
 import 'package:calculator/domain/exceptions/divide_by_zero_exception.dart';
 import 'package:calculator/domain/expression.dart';
 
-class Divide implements Expression {
-  const Divide({
+class Division implements Expression {
+  const Division({
     required Expression left,
     required Expression right,
   })  : _left = left,

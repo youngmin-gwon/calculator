@@ -1,11 +1,11 @@
 import 'package:calculator/domain/exceptions/divide_by_zero_exception.dart';
 import 'package:calculator/domain/operand/number.dart';
-import 'package:calculator/domain/operations/divide.dart';
+import 'package:calculator/domain/operations/division.dart';
 import 'package:test/test.dart';
 
 void main() {
   group(
-    'Divide:',
+    'Division:',
     () {
       test(
         '0으로 나누는 나눗셈은 `DivideByZeroException` 을 던져야 합니다.',
@@ -13,7 +13,7 @@ void main() {
           // arrange
           final leftOperand = Number('1');
           final rightOperand = Number('0');
-          final addition = Divide(
+          final addition = Division(
             left: leftOperand,
             right: rightOperand,
           );
@@ -32,7 +32,7 @@ void main() {
           // arrange
           final leftOperand = Number('1');
           final rightOperand = Number('2');
-          final addition = Divide(
+          final addition = Division(
             left: leftOperand,
             right: rightOperand,
           );

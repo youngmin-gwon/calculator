@@ -1,7 +1,7 @@
 import 'package:calculator/domain/expression.dart';
 
-final class Add implements Expression {
-  const Add({
+final class Addition implements Expression {
+  const Addition({
     required Expression left,
     required Expression right,
   })  : _left = left,
