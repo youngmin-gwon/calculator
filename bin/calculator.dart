@@ -1,5 +1,6 @@
 import 'package:calculator/calculator.dart' as calculator;
 
 void main(List<String> arguments) {
-  print('Hello world: ${arguments.join('')}');
+  final joinedArguments = arguments.join('');
+  calculator.calculate(joinedArguments);
 }
