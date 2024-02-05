@@ -15,7 +15,7 @@
   - 문서에 따르면 기본 산술 연산을 `String` 형태로 받는 방식이 됨
 
 ```bash
-calculator "3-4"
+calculator "3 - 4"
 ```
 
 - 다음 스프린트를 고려해서 `interface`를 설계하고 이를 구현으로 확장하는 방식으로 가야할 것으로 보임
@@ -25,20 +25,10 @@ calculator "3-4"
 ### 1. Domain의 관점
 
 - 각각의 연산 결과 검증
+- 불가능한 연산이 아닌지 검증 (e.g. `1 / 0`)
 
 ### 2. Application 의 관점
 
 - Input 검증
   - format(`operand` `operation` `operand`)이 맞는지 검증
-  - 불가능한 연산이 아닌지 검증 (e.g. `calculator "1/0"`)
   - 현재 지원 가능한 연산인지 검증
-
-## 의문점
-
-- 복합 연산도 지원해야하나?
-
-```bash
-calculator "1+2+3+4"
-```
-
-> why not?
