@@ -32,8 +32,8 @@ void main() {
         'double 뺄셈은 double을 반환 해야합니다.(소수점 첫째자리)',
         () async {
           // arrange
-          final leftOperand = Number('2.');
-          final rightOperand = Number('2.0');
+          final leftOperand = Number('1.');
+          final rightOperand = Number('1.1');
           final addition = Subtract(
             left: leftOperand,
             right: rightOperand,
@@ -44,7 +44,7 @@ void main() {
 
           // assertion
           expect(result, isA<double>());
-          expect(result.toStringAsFixed(1), (0.0).toStringAsFixed(1));
+          expect(result.toStringAsFixed(1), (-0.1).toStringAsFixed(1));
         },
       );
 
@@ -54,7 +54,7 @@ void main() {
         'double 뺄셈은 double을 반환 해야합니다.(소수점 둘째자리)',
         () async {
           // arrange
-          final leftOperand = Number('5.00');
+          final leftOperand = Number('1.50');
           final rightOperand = Number('2.50');
           final addition = Subtract(
             left: leftOperand,
@@ -66,7 +66,7 @@ void main() {
 
           // assertion
           expect(result, isA<double>());
-          expect(result.toStringAsFixed(2), (2.50).toStringAsFixed(2));
+          expect(result.toStringAsFixed(2), (-1.00).toStringAsFixed(2));
         },
       );
 
@@ -76,8 +76,8 @@ void main() {
         'double 뺄셈은 double을 반환 해야합니다.(소수점 셋째자리)',
         () async {
           // arrange
-          final leftOperand = Number('1.234');
-          final rightOperand = Number('0.233');
+          final leftOperand = Number('1.111');
+          final rightOperand = Number('2.222');
           final addition = Subtract(
             left: leftOperand,
             right: rightOperand,
@@ -88,7 +88,7 @@ void main() {
 
           // assertion
           expect(result, isA<double>());
-          expect(result.toStringAsFixed(3), (1.001).toStringAsFixed(3));
+          expect(result.toStringAsFixed(3), (-1.111).toStringAsFixed(3));
         },
       );
 
@@ -98,8 +98,8 @@ void main() {
         'int 와 double 뺄셈은 double을 반환 해야합니다.',
         () async {
           // arrange
-          final leftOperand = Number('2');
-          final rightOperand = Number('0.0001');
+          final leftOperand = Number('1');
+          final rightOperand = Number('2.3456');
           final addition = Subtract(
             left: leftOperand,
             right: rightOperand,
@@ -110,7 +110,7 @@ void main() {
 
           // assertion
           expect(result, isA<double>());
-          expect(result.toStringAsFixed(4), (1.9999).toStringAsFixed(4));
+          expect(result.toStringAsFixed(4), (-1.3456).toStringAsFixed(4));
         },
       );
     },

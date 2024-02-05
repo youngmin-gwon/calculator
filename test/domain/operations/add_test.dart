@@ -33,7 +33,7 @@ void main() {
         () async {
           // arrange
           final leftOperand = Number('1.');
-          final rightOperand = Number('2.2');
+          final rightOperand = Number('1.1');
           final addition = Add(
             left: leftOperand,
             right: rightOperand,
@@ -44,7 +44,7 @@ void main() {
 
           // assertion
           expect(result, isA<double>());
-          expect(result.toStringAsFixed(1), (3.2).toStringAsFixed(1));
+          expect(result.toStringAsFixed(1), (2.1).toStringAsFixed(1));
         },
       );
 
