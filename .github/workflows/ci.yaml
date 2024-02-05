@@ -6,6 +6,9 @@ permissions:
 on:
   pull_request:
     types: [opened, reopened, edited]
+  push:
+    branches:
+      - main
 
 jobs:
   cache_trimmer:
