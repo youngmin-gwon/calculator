@@ -4,7 +4,7 @@ import 'package:test/test.dart';
 
 void main() {
   group(
-    'Subtract',
+    'Subtract:',
     () {
       test(
         'integer 뺄셈은 integer를 반환 해야합니다.',

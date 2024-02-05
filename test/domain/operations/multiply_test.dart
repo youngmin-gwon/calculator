@@ -4,7 +4,7 @@ import 'package:test/test.dart';
 
 void main() {
   group(
-    'Multiply',
+    'Multiply:',
     () {
       test(
         'integer 곱셈은 integer를 반환 해야합니다.',

@@ -4,7 +4,7 @@ import 'package:test/test.dart';
 
 void main() {
   group(
-    'Number',
+    'Number:',
     () {
       test(
         'integer 포맷을 넣었을 때, int 를 반환해야 합니다.',
